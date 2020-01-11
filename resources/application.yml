@@ -1,0 +1,36 @@
+spring:
+  application:
+    name: sharding_jdbc_db_table
+
+  datasource:
+
+    database0-master:
+      type: com.zaxxer.hikari.HikariDataSource
+      driverClassName: com.mysql.cj.jdbc.Driver
+      jdbcUrl: jdbc:mysql://192.168.108.127:3306/database01?useUnicode=true&characterEncoding=utf8&tinyInt1isBit=false&useSSL=false&serverTimezone=GMT
+      username: root
+      password: 721000
+
+    database0-slave:
+      type: com.zaxxer.hikari.HikariDataSource
+      driverClassName: com.mysql.cj.jdbc.Driver
+      jdbcUrl: jdbc:mysql://192.168.108.128:3306/database01?useUnicode=true&characterEncoding=utf8&tinyInt1isBit=false&useSSL=false&serverTimezone=GMT
+      username: root
+      password: 721000
+
+    database1-master:
+      type: com.zaxxer.hikari.HikariDataSource
+      driverClassName: com.mysql.cj.jdbc.Driver
+      jdbcUrl: jdbc:mysql://192.168.108.129:3306/database02?useUnicode=true&characterEncoding=utf8&tinyInt1isBit=false&useSSL=false&serverTimezone=GMT
+      username: root
+      password: 721000
+
+    database1-slave:
+      type: com.zaxxer.hikari.HikariDataSource
+      driverClassName: com.mysql.cj.jdbc.Driver
+      jdbcUrl: jdbc:mysql://192.168.108.130:3306/database02?useUnicode=true&characterEncoding=utf8&tinyInt1isBit=false&useSSL=false&serverTimezone=GMT
+      username: root
+      password: 721000
+
+server:
+  port: 8080
