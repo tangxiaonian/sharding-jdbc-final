@@ -9,7 +9,7 @@ sharding-jdbc实现读写分离+分表分库
 
 数据表:
 
-CREATE TABLE `goods_0` (
+CREATE TABLE `goods` (
   `goods_id` bigint(20) NOT NULL,
   `goods_name` varchar(100) CHARACTER SET utf8 COLLATE utf8_bin NOT NULL,
   `goods_type` bigint(20) DEFAULT NULL,
